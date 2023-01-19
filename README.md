@@ -1,1 +1,1 @@
-# docker-weather-discord-bot
+# docker-weather-forecast-bot
