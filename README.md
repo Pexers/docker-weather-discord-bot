@@ -21,7 +21,7 @@ WeatherBot#0000 is now running!
 (Work in progress)
 |Command|Description|
 |---|---|
-|`!weather/country/COUNTRY_NAME`|Retrieves the current temperature in `COUNTRY_NAME`, in degrees Celsius.|
+|`!weather/country/COUNTRY_NAME`|Provides the current temperature in `COUNTRY_NAME`, in degrees Celsius.|
 |`!help`|Provides information on built-in commands.|
 
 ## References
