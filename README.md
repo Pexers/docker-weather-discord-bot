@@ -22,7 +22,7 @@ WeatherBot#0000 is now running!
 |Command|Description|
 |---|---|
 |`!weather/country/COUNTRY_NAME`|Retrieves the current temperature in `COUNTRY_NAME`, in degrees Celsius.|
-|`!help`|Logs all the commands and respective description to guide the user.|
+|`!help`|Provides information on built-in commands.|
 
 ## References
 - [Weather Forecast API](https://open-meteo.com/en/docs#api-documentation)
