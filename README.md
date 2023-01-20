@@ -6,13 +6,13 @@ A Python-based [**Discord**](https://discord.com/) bot running on a Docker conta
 ### Setting up the Docker environment
 1. Install [**Docker**](https://www.docker.com/products/docker-desktop/).
 2. Modify the [Dockerfile](https://github.com/Pexers/docker-weather-forecast-bot/blob/main/Dockerfile) and replace `YOUR_BOT_TOKEN` with a valid token provided by the [Discord Developer Portal](https://discord.com/developers/docs/intro).
-3. Build the docker image. A build’s context is the set of files located in the specified `[path]`:
+3. Build the docker image. A build’s context is the set of files located in the specified `PATH`:
 ```
-docker build --tag [image] [path]
+docker build -t IMAGE PATH
 ```
-4. Run the robot on a new container. The `docker run` command will first create a writeable container layer over the specified `[image]`, and then starts it using the specified command:
+4. Run the robot on a new container. The `docker run` command will first create a writeable container layer over the specified `IMAGE`, and then starts it using the specified command:
 ```
-docker run [image]
+docker run IMAGE
 ⋮
 WeatherBot#0000 is now running!
 ```
@@ -21,7 +21,7 @@ WeatherBot#0000 is now running!
 (Work in progress)
 |Command|Description|
 |---|---|
-|`!weather/country/[country_name]`|Retrieves the current temperature in `[country_name]`, in degrees Celsius.|
+|`!weather/country/COUNTRY_NAME`|Retrieves the current temperature in `COUNTRY_NAME`, in degrees Celsius.|
 |`!help`|Logs all the commands and respective description to guide the user.|
 
 ## References
