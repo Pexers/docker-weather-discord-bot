@@ -5,7 +5,7 @@ A Python-based [**Discord**](https://discord.com/) bot running on a Docker conta
 
 ### Setting up the Docker environment
 1. Install [**Docker**](https://www.docker.com/products/docker-desktop/).
-2. Modify the [Dockerfile](https://github.com/Pexers/docker-weather-forecast-bot/blob/main/Dockerfile) and replace `YOUR_BOT_TOKEN` with a valid token provided by the [Discord Developer Portal](https://discord.com/developers/docs/intro).
+2. Modify the [Dockerfile](Dockerfile) and replace `YOUR_BOT_TOKEN` with a valid token provided by the [Discord Developer Portal](https://discord.com/developers/docs/intro).
 3. Build the docker image. A build’s context is the set of files located in the specified `PATH`:
   ```sh
   $ docker build -t IMAGE PATH
