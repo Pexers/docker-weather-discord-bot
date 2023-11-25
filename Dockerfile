@@ -1,18 +1,18 @@
-# syntax=docker/dockerfile:1
+FROM python:3-alpine
+MAINTAINER Pexers <https://github.com/Pexers>
+LABEL org.opencontainers.image.authors="Pexers <https://github.com/Pexers>"
 
-FROM python:3.8-slim-buster
+ARG REQUIRE_PATH=/home/bot/requirements
 
-WORKDIR /app
+COPY --chown=guest ./requirements/ ${REQUIRE_PATH}/
+COPY --chown=guest ./src/ ./data/ /home/src/
 
-# The COPY command takes two parameters. The first parameter tells Docker what file(s) you would like to copy into the image. The second parameter tells Docker where you want that file(s) to be copied to
-COPY code/requirements.txt code/requirements.txt
+# Install required packages
+RUN apk add --no-cache \
+    gcc \
+    libc-dev \
+    && pip3 install --no-cache-dir --upgrade --requirement ${REQUIRE_PATH}/requirements.txt
 
-# 'requirements.txt' file stores information about all the libraries, modules, and packages
-RUN pip3 install -r code/requirements.txt
-
-# This COPY command takes all the files located in the current directory and copies them into the image, except the ones specified in '.dockerignore'
-COPY . .
-
-ENV BOT_TOKEN=YOUR_BOT_TOKEN
-
-CMD ["python3", "code/main.py"]
+# Alpine Linux guest user
+USER guest
+ENTRYPOINT ["python3", "/home/src/bot.py"]
