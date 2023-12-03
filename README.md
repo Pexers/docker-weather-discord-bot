@@ -16,7 +16,6 @@ A Python-based [**Discord**](https://discord.com/) bot running on Docker to prov
     ⋮
     WeatherBot#0000 is now running!
     ```
-> <img src="https://github.com/Pexers/docker-weather-forecast-bot/assets/47757441/1c290328-a2ae-4d56-959b-6c0108cf072e" width="480">
 
 ## Discord commands
 (Work in progress)
